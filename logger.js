@@ -171,7 +171,9 @@ exports.Logger = function() {
     exports.db.get(
       "select data from events where class not in ('VERSION', 'DEVICES', 'DEVICE', 'WATCH', 'REPLAY') order by timestamp desc limit 1",
       function(err, row) {
-        self.sendResponse(JSON.parse(row.data));
+        if(row) {
+          self.sendResponse(JSON.parse(row.data));
+        }
     });
   });
 
