@@ -64,9 +64,7 @@ exports.getKml = function(req, res) {
       '      <LineString>\n' +
       '        <extrude>1</extrude>\n' +
       '        <tessellate>1</tessellate>\n' +
-      '        <altitudeMode>absolute</altitudeMode>\n' +
-      '        <coordinates>\n',
-      '        </coordinates>\n' +
+      '        <altitudeMode>absolute</altitudeMode>\n',
       '      </LineString>\n' +
       '    </Placemark>\n',
       function (cb) { sendCoordinates(coordinates, cb); },
